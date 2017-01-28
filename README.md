@@ -22,6 +22,13 @@ $ ng g c component-name -it -is
 $ ng generate component component-name
 ```
 
+Generate a new service.  
+You can also use `ng generate directive/pipe/service/class/module`.
+```
+$ ng g s service-name
+$ ng generate service service-name
+```
+
 ## Build
 Build the project.  
 The build artifacts will be stored in the `dist/` directory.  

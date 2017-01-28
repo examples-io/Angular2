@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { EventHandlersComponent } from './event-handlers.component';
+import { Lab5ShareServicesDataComponent } from './lab-5-share-services-data.component';
 
-describe('EventHandlersComponent', () => {
-  let component: EventHandlersComponent;
-  let fixture: ComponentFixture<EventHandlersComponent>;
+describe('Lab5ShareServicesDataComponent', () => {
+  let component: Lab5ShareServicesDataComponent;
+  let fixture: ComponentFixture<Lab5ShareServicesDataComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ EventHandlersComponent ]
+      declarations: [ Lab5ShareServicesDataComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(EventHandlersComponent);
+    fixture = TestBed.createComponent(Lab5ShareServicesDataComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

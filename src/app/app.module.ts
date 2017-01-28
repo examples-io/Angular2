@@ -4,25 +4,44 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { SimpleFormComponent } from './simple-form/simple-form.component';
-import { EventsRefsComponent } from './events-refs/events-refs.component';
-import { EventHandlersComponent } from './event-handlers/event-handlers.component';
-import { DependencyInjectionComponent } from './dependency-injection/dependency-injection.component';
+import { Lab1HelloWorldComponent } from './lab-1-hello-world/lab-1-hello-world.component';
+import { Lab2ComponentsComponent } from './lab-2-components/lab-2-components.component';
+import { Lab3EventsRefComponent } from './lab-3-events-ref/lab-3-events-ref.component';
+import { Lab4EventHandlersComponent } from './lab-4-event-handlers/lab-4-event-handlers.component';
+import { Lab5ShareServicesDataComponent } from './lab-5-share-services-data/lab-5-share-services-data.component';
+import { Lab6ProvideShareValuesComponent } from './lab-6-provide-share-values/lab-6-provide-share-values.component';
+import {MailService} from "./services/mail.service";
+import {SmsService} from "./services/sms.service";
+import { Lab7LoopNgforComponent } from './lab-7-loop-ngfor/lab-7-loop-ngfor.component';
+import { Lab8PassValueIntoComponentComponent } from './lab-8-pass-value-into-component/lab-8-pass-value-into-component.component';
+import { Lab9TwoWayBindingComponent } from './lab-9-two-way-binding/lab-9-two-way-binding.component';
+import { Lab8PassValueIntoComponentTargetComponent } from './lab-8-pass-value-into-component-target/lab-8-pass-value-into-component-target.component';
+import { Lab9TwoWayBindingTargetComponent } from './lab-9-two-way-binding-target/lab-9-two-way-binding-target.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SimpleFormComponent,
-    EventsRefsComponent,
-    EventHandlersComponent,
-    DependencyInjectionComponent
+    Lab1HelloWorldComponent,
+    Lab2ComponentsComponent,
+    Lab3EventsRefComponent,
+    Lab4EventHandlersComponent,
+    Lab5ShareServicesDataComponent,
+    Lab6ProvideShareValuesComponent,
+    Lab7LoopNgforComponent,
+    Lab8PassValueIntoComponentComponent,
+    Lab8PassValueIntoComponentTargetComponent,
+    Lab9TwoWayBindingComponent,
+    Lab9TwoWayBindingTargetComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [
+    {provide: MailService, useClass: MailService},
+    {provide: 'sms', useClass: SmsService},
+    {provide: 'api', useValue: 'http://localhost:3000'}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,9 @@
+<h3>Lab 9: Sync Values from Inputs with Angular 2’s ngModel Two-Way Binding</h3>
+<div>
+  <ul>
+    <app-lab-9-two-way-binding-target
+            *ngFor="let message of sms.messages"
+            [message]="message">
+    </app-lab-9-two-way-binding-target>
+  </ul>
+</div>

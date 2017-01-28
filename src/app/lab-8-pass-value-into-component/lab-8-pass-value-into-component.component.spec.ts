@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { EventsRefsComponent } from './events-refs.component';
+import { Lab8PassValueIntoComponentComponent } from './lab-8-pass-value-into-component.component';
 
-describe('EventsRefsComponent', () => {
-  let component: EventsRefsComponent;
-  let fixture: ComponentFixture<EventsRefsComponent>;
+describe('Lab8PassValueIntoComponentComponent', () => {
+  let component: Lab8PassValueIntoComponentComponent;
+  let fixture: ComponentFixture<Lab8PassValueIntoComponentComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ EventsRefsComponent ]
+      declarations: [ Lab8PassValueIntoComponentComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(EventsRefsComponent);
+    fixture = TestBed.createComponent(Lab8PassValueIntoComponentComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
