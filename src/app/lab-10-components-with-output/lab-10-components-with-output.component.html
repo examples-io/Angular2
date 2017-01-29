@@ -1,0 +1,13 @@
+<h3>Lab 10: Pass Events from Angular 2 Components with @Output</h3>
+<div>
+  <ul>
+    <li *ngFor="let message of quest.messages">{{message.text}}</li>
+  </ul>
+    <app-lab-10-components-with-output-target
+            *ngFor="let message of quest.messages"
+            [message]="message.text"
+            (update)="onUpdate(message.id, $event.text)"
+    >
+    </app-lab-10-components-with-output-target>
+</div>
+<hr>

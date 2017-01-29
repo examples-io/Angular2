@@ -17,6 +17,13 @@ import { Lab8PassValueIntoComponentComponent } from './lab-8-pass-value-into-com
 import { Lab9TwoWayBindingComponent } from './lab-9-two-way-binding/lab-9-two-way-binding.component';
 import { Lab8PassValueIntoComponentTargetComponent } from './lab-8-pass-value-into-component-target/lab-8-pass-value-into-component-target.component';
 import { Lab9TwoWayBindingTargetComponent } from './lab-9-two-way-binding-target/lab-9-two-way-binding-target.component';
+import { Lab10ComponentsWithOutputComponent } from './lab-10-components-with-output/lab-10-components-with-output.component';
+import { Lab10ComponentsWithOutputTargetComponent } from './lab-10-components-with-output-target/lab-10-components-with-output-target.component';
+import {QuestService} from "./services/quest.service";
+import { Lab11CssInsideComponentsComponent } from './lab-11-css-inside-components/lab-11-css-inside-components.component';
+import { Lab11CssInsideComponentsTargetComponent } from './lab-11-css-inside-components-target/lab-11-css-inside-components-target.component';
+import { Lab12ApplyCssConditionallyComponent } from './lab-12-apply-css-conditionally/lab-12-apply-css-conditionally.component';
+import { Lab12ApplyCssConditionallyTargetComponent } from './lab-12-apply-css-conditionally-target/lab-12-apply-css-conditionally-target.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +39,12 @@ import { Lab9TwoWayBindingTargetComponent } from './lab-9-two-way-binding-target
     Lab8PassValueIntoComponentTargetComponent,
     Lab9TwoWayBindingComponent,
     Lab9TwoWayBindingTargetComponent,
+    Lab10ComponentsWithOutputComponent,
+    Lab10ComponentsWithOutputTargetComponent,
+    Lab11CssInsideComponentsComponent,
+    Lab11CssInsideComponentsTargetComponent,
+    Lab12ApplyCssConditionallyComponent,
+    Lab12ApplyCssConditionallyTargetComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,6 +54,7 @@ import { Lab9TwoWayBindingTargetComponent } from './lab-9-two-way-binding-target
   providers: [
     {provide: MailService, useClass: MailService},
     {provide: 'sms', useClass: SmsService},
+    {provide: 'quest', useClass: QuestService},
     {provide: 'api', useValue: 'http://localhost:3000'}],
   bootstrap: [AppComponent]
 })

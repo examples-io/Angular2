@@ -1,0 +1,13 @@
+<h3>Lab 12: Apply CSS Classes Conditionally with Angular 2’s ngClass</h3>
+<div>
+  <ul>
+    <li *ngFor="let message of quest.messages">{{message.text}}</li>
+  </ul>
+  <app-lab-12-apply-css-conditionally-target
+          *ngFor="let message of quest.messages"
+          [message]="message.text"
+          (update)="onUpdate(message.id, $event.text)"
+  >
+  </app-lab-12-apply-css-conditionally-target>
+</div>
+<hr>
